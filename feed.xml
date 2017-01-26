@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-01-26T09:04:47-08:00</updated><id>http://localhost:4000//</id><title type="html">Andrew’s Blog</title><subtitle>Writings by a data analyst int the Bay Area.
+</subtitle><entry><title type="html">Welcome to my blog</title><link href="http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog.html" rel="alternate" type="text/html" title="Welcome to my blog" /><published>2017-01-25T10:35:39-08:00</published><updated>2017-01-25T10:35:39-08:00</updated><id>http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog.html">&lt;p&gt;Thanks for visiting my blog.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://gitub.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><summary type="html">Thanks for visiting my blog.</summary></entry><entry><title type="html">Using open data sets</title><link href="http://localhost:4000/jekyll/update/2017/01/25/using-open-data-sets.html" rel="alternate" type="text/html" title="Using open data sets" /><published>2017-01-25T10:35:39-08:00</published><updated>2017-01-25T10:35:39-08:00</updated><id>http://localhost:4000/jekyll/update/2017/01/25/using-open-data-sets</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/01/25/using-open-data-sets.html">&lt;p&gt;To view the code, &lt;a href=&quot;http://nbviewer.jupyter.org/github/andrewgstark/DSI-SF-4-andrewgstark/blob/master/capstone/Finding_Pension_Spikers_Through_Data_Science.ipynb&quot; target=&quot;_blank&quot;&gt;click here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nbviewer.jupyter.org/github/andrewgstark/DSI-SF-4-andrewgstark/blob/master/capstone/Finding_Pension_Spikers_Through_Data_Science.ipynb&quot;&gt;click here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To download the Jupyter Notebook, click here.&lt;/p&gt;
+
+&lt;p&gt;Using open data sets….&lt;/p&gt;
+
+&lt;p&gt;.. which is shown in the screenshot below:
+&lt;img src=&quot;http://localhost:4000/assets/IMG_2647.JPG&quot; alt=&quot;My helpful screenshot&quot; /&gt;
+Linking to a PDF for readers to download:&lt;/p&gt;</content><summary type="html">To view the code, click here</summary></entry></feed>
