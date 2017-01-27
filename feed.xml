@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-01-27T13:04:40-08:00</updated><id>http://localhost:4000//</id><title type="html">Open Data Insights</title><subtitle>Writings and analysis of public data sets, by a data analyst in the SF Bay Area</subtitle><entry><title type="html">Welcome to my blog</title><link href="http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog.html" rel="alternate" type="text/html" title="Welcome to my blog" /><published>2017-01-25T10:35:39-08:00</published><updated>2017-01-25T10:35:39-08:00</updated><id>http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog.html">&lt;p&gt;Thanks for visiting my blog.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-01-27T15:16:47-08:00</updated><id>http://localhost:4000//</id><title type="html">Open Data Insights</title><subtitle>Writings and analysis of public data sets, by a data analyst in the SF Bay Area</subtitle><entry><title type="html">Welcome to my blog</title><link href="http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog.html" rel="alternate" type="text/html" title="Welcome to my blog" /><published>2017-01-25T10:35:39-08:00</published><updated>2017-01-25T10:35:39-08:00</updated><id>http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog.html">&lt;p&gt;Thanks for visiting my blog.&lt;/p&gt;
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
 
@@ -20,4 +20,18 @@
 
 &lt;p&gt;There was a larger spike in police and fire retirements after 2010, possibly due to adopting the “3% at 50” retirement plan, first negotiated by the CHP.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/retire_years_policefire.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;</content><summary type="html">To view or download  the code, click here</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/retire_years_policefire.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;correlation-between-pay-and-service-years-on-pension-payment&quot;&gt;Correlation Between Pay and Service Years on Pension Payment&lt;/h4&gt;
+
+&lt;p&gt;For the two pension plans that service City of San Jose employees, the Police and Fire Fund has the more generous pension payment. The trend line for the Police and Fire fund has a steeper slope to reflect this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/base_vs_pensionpay.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/service_vs_pensionpay.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When considering the current pool of employees, the length of service for police and fire exceeds that of other employees. This is likely due to people dedicating their entire career to the force. This may be since skill sets for Police and Fire don’t easily transfer to the private sector. Also, Police and Fire may be more attractive careers considering the high pay and good benefits.&lt;/p&gt;
+
+&lt;p&gt;However, the number of years of service for Police and Fire has been steadily decreasing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/service_vs_yearofretire.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;</content><summary type="html">To view or download  the code, click here</summary></entry></feed>
