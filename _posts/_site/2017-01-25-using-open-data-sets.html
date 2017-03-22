@@ -1,0 +1,68 @@
+<p><strong>To view or download  the code</strong>, <a href="http://nbviewer.jupyter.org/github/andrewgstark/DSI-SF-4-andrewgstark/blob/master/capstone/Finding_Pension_Spikers_Through_Data_Science.ipynb" target="_blank">click here</a></p>
+
+<ul id="markdown-toc">
+  <li><a href="#problem-statement" id="markdown-toc-problem-statement">Problem Statement</a></li>
+  <li><a href="#datasets" id="markdown-toc-datasets">Datasets</a></li>
+  <li><a href="#business-need-and-stakeholders" id="markdown-toc-business-need-and-stakeholders">Business Need and Stakeholders</a></li>
+  <li><a href="#exploratory-data-analysis-and-visualizations" id="markdown-toc-exploratory-data-analysis-and-visualizations">Exploratory Data Analysis and Visualizations</a>    <ul>
+      <li><a href="#when-did-pension-recipients-retire" id="markdown-toc-when-did-pension-recipients-retire">When did Pension Recipients Retire?</a></li>
+      <li><a href="#correlation-between-pay-and-service-years-on-pension-payment" id="markdown-toc-correlation-between-pay-and-service-years-on-pension-payment">Correlation Between Pay and Service Years on Pension Payment</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="problem-statement">Problem Statement</h1>
+
+<p>Public sector employees in California are eligible for pensions, based on their final earnings and years of service. These pensions are paid for the retiree’s lifetime, and can optionally be paid to the retiree’s beneficiary for their lifetime. 
+Public pension plans have a huge unfunded liability (the promises made to current and future retirees exceeds the pension funds ability to pay for those promises). There are several reasons for this unfunded liability including:</p>
+
+<ol>
+  <li>
+    <p>Legislation in 1999 (SB 400) that increased benefits and reduced the retirement age</p>
+  </li>
+  <li>
+    <p>Investment returns less than forecast (dot com bust, mortgage crisis, low interest rate)</p>
+  </li>
+  <li>
+    <p>A growing pool of retired employees, and corresponding growing pension obligations</p>
+  </li>
+  <li>
+    <p>Pension spiking, i.e., inflating a retiring employee’s final salary used to calculate the level of pension payment</p>
+  </li>
+</ol>
+
+<p>pension-liabilities-fig1
+<img src="http://localhost:4000/assets/pension-liabilities-fig1.png" alt="California public pension unfunded liabilities" /></p>
+
+<p>Pension managers have no control over 1 to 3. But some public pension funds do try to detect pension spiking via audits and getting tips.</p>
+
+<h1 id="datasets">Datasets</h1>
+
+<h1 id="business-need-and-stakeholders">Business Need and Stakeholders</h1>
+
+<h1 id="exploratory-data-analysis-and-visualizations">Exploratory Data Analysis and Visualizations</h1>
+
+<h2 id="when-did-pension-recipients-retire">When did Pension Recipients Retire?</h2>
+
+<p>Spike in people retiring during the 2009-2011 economic downturn, possible due to early retirement packages and employee attrition,</p>
+
+<p><img src="http://localhost:4000/assets/retire_years_federated.png" alt="Year of retiral for recipients of Federated pension" /></p>
+
+<p>There was a larger spike in police and fire retirements after 2010, possibly due to adopting the “3% at 50” retirement plan, first negotiated by the CHP.</p>
+
+<p><img src="http://localhost:4000/assets/retire_years_policefire.png" alt="Year of retiral for the police and fire pension fund" /></p>
+
+<h2 id="correlation-between-pay-and-service-years-on-pension-payment">Correlation Between Pay and Service Years on Pension Payment</h2>
+
+<p>For the two pension plans that service City of San Jose employees, the Police and Fire Fund has the more generous pension payment. The trend line for the Police and Fire fund has a steeper slope to reflect this.</p>
+
+<p><img src="http://localhost:4000/assets/base_vs_pensionpay.png" alt="Correlation between base pay and pension payment" /></p>
+
+<p><img src="http://localhost:4000/assets/service_vs_pensionpay.png" alt="Correlation between length of service and pension payment" /></p>
+
+<p>When considering the current pool of employees, the length of service for police and fire exceeds that of other employees. This is likely due to people dedicating their entire career to the force. This may be since skill sets for Police and Fire don’t easily transfer to the private sector. Also, Police and Fire may be more attractive careers considering the high pay and good benefits.</p>
+
+<p>However, the number of years of service for Police and Fire has been steadily decreasing.</p>
+
+<p><img src="http://localhost:4000/assets/service_vs_yearofretire.png" alt="Years of service when retiring" /></p>
+

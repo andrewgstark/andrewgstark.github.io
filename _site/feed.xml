@@ -1,23 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-01-27T10:10:55-08:00</updated><id>http://localhost:4000//</id><title type="html">Open Data Insights</title><subtitle>Writings and analysis of public data sets, by a data analyst in the SF Bay Area</subtitle><entry><title type="html">Welcome to my blog</title><link href="http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog.html" rel="alternate" type="text/html" title="Welcome to my blog" /><published>2017-01-25T10:35:39-08:00</published><updated>2017-01-25T10:35:39-08:00</updated><id>http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog.html">&lt;p&gt;Thanks for visiting my blog.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-03-21T16:56:29-07:00</updated><id>http://localhost:4000//</id><title type="html">Open Data Insights</title><subtitle>Writings and analysis of public data sets, by a data analyst in the SF Bay Area</subtitle><entry><title type="html">Welcome to my blog</title><link href="http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog.html" rel="alternate" type="text/html" title="Welcome to my blog" /><published>2017-01-25T10:35:39-08:00</published><updated>2017-01-25T10:35:39-08:00</updated><id>http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/01/25/welcome-to-my-blog.html">&lt;p&gt;Thanks for visiting my blog.&lt;/p&gt;</content><summary type="html">Thanks for visiting my blog.</summary></entry><entry><title type="html">Analysing Public Data About City of San Jose Salaries and Pensions</title><link href="http://localhost:4000/jekyll/update/2017/01/25/using-open-data-sets.html" rel="alternate" type="text/html" title="Analysing Public Data About City of San Jose Salaries and Pensions" /><published>2017-01-25T10:35:39-08:00</published><updated>2017-01-25T10:35:39-08:00</updated><id>http://localhost:4000/jekyll/update/2017/01/25/using-open-data-sets</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/01/25/using-open-data-sets.html">&lt;p&gt;&lt;strong&gt;To view or download  the code&lt;/strong&gt;, &lt;a href=&quot;http://nbviewer.jupyter.org/github/andrewgstark/DSI-SF-4-andrewgstark/blob/master/capstone/Finding_Pension_Spikers_Through_Data_Science.ipynb&quot; target=&quot;_blank&quot;&gt;click here&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#problem-statement&quot; id=&quot;markdown-toc-problem-statement&quot;&gt;Problem Statement&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#business-need-and-stakeholders&quot; id=&quot;markdown-toc-business-need-and-stakeholders&quot;&gt;Business Need and Stakeholders&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#datasets&quot; id=&quot;markdown-toc-datasets&quot;&gt;Datasets&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#exploratory-data-analysis-and-visualizations&quot; id=&quot;markdown-toc-exploratory-data-analysis-and-visualizations&quot;&gt;Exploratory Data Analysis and Visualizations&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#when-did-pension-recipients-retire&quot; id=&quot;markdown-toc-when-did-pension-recipients-retire&quot;&gt;When did Pension Recipients Retire?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#correlation-between-pay-and-service-years-on-pension-payment&quot; id=&quot;markdown-toc-correlation-between-pay-and-service-years-on-pension-payment&quot;&gt;Correlation Between Pay and Service Years on Pension Payment&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;problem-statement&quot;&gt;Problem Statement&lt;/h1&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://gitub.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><summary type="html">Thanks for visiting my blog.</summary></entry><entry><title type="html">Analysis of California Public Pension Liabilities</title><link href="http://localhost:4000/jekyll/update/2017/01/25/using-open-data-sets.html" rel="alternate" type="text/html" title="Analysis of California Public Pension Liabilities" /><published>2017-01-25T10:35:39-08:00</published><updated>2017-01-25T10:35:39-08:00</updated><id>http://localhost:4000/jekyll/update/2017/01/25/using-open-data-sets</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/01/25/using-open-data-sets.html">&lt;p&gt;To view or download  the code, &lt;a href=&quot;http://nbviewer.jupyter.org/github/andrewgstark/DSI-SF-4-andrewgstark/blob/master/capstone/Finding_Pension_Spikers_Through_Data_Science.ipynb&quot; target=&quot;_blank&quot;&gt;click here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Public sector employees in California are eligible for pensions, based on their final earnings and years of service. These pensions are paid for the retiree’s lifetime, and can optionally be paid to the retiree’s beneficiary for their lifetime. 
+Public pension plans have a huge unfunded liability (the promises made to current and future retirees exceeds the pension funds ability to pay for those promises). There are several reasons for this unfunded liability including:&lt;/p&gt;
 
-&lt;h3 id=&quot;exploratory-data-analysis-h1&quot;&gt;Exploratory Data Analysis H1&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Legislation in 1999 (SB 400) that increased benefits and reduced the retirement age&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Investment returns less than forecast (dot com bust, mortgage crisis, low interest rate)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A growing pool of retired employees, and corresponding growing pension obligations&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pension spiking, i.e., inappropriate enhancement of the pension benefit, usually when the employer pays an excessive increase of compensation at the end of an employee’s career.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h4 id=&quot;how-many-employees-retire-per-year&quot;&gt;How Many Employees Retire Per Year&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/pension-liabilities-fig1.png&quot; alt=&quot;California public pension unfunded liabilities&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Figure source:  &lt;a href=&quot;http://www.ppic.org/main/publication_show.asp?i=1157&quot; target=&quot;_blank&quot;&gt;Public Policy Institute of California&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This underfunding is causing the pension costs to Cities, Counties and other public sector employers to increase rapidly.&lt;/p&gt;
+
+&lt;p&gt;Pension managers have no control over 1 to 3. But some public pension funds do try to detect pension spiking via audits and getting tips.&lt;/p&gt;
+
+&lt;h1 id=&quot;business-need-and-stakeholders&quot;&gt;Business Need and Stakeholders&lt;/h1&gt;
+
+&lt;p&gt;Pension funds protect themselves again pension spiking by conducting employer audits, reviewing compensation of individual retirees and issuing clear guidelines about what constitutes creditable pay.&lt;/p&gt;
+
+&lt;p&gt;For example, the CA State Teachers Retirement System (CalSTRS) has the following guidelines:&lt;/p&gt;
+
+&lt;p&gt;** Not creditable: cash in lieu of fringe benefits, any reimbursable business expense, e.g., housing or auto expenses&lt;/p&gt;
+
+&lt;p&gt;** Creditable: pay linked to special certificates, credentials for advanced degrees&lt;/p&gt;
+
+&lt;p&gt;** Assignments in addition to regular full-time employment: coaching, summer school, extracurricular activities, etc. earn credit towards a separate benefit (the Defined Benefit Supplement Program (DBS)&lt;/p&gt;
+
+&lt;p&gt;** Compensation paid for a specified time period or is a late-career increase inconsistent with the employee’s salary history is credited to DBS and not the standard pension.&lt;/p&gt;
+
+&lt;h1 id=&quot;datasets&quot;&gt;Datasets&lt;/h1&gt;
+
+&lt;p&gt;Governments around the world are release more data as part of “open data” initiatives, to improve efficiency and increase transparency. Compensation data about public sector employees is considered public information, and is available from several different source:&lt;/p&gt;
+
+&lt;p&gt;** &lt;a href=&quot;http://publicpay.ca.gov/&quot; target=&quot;_blank&quot;&gt;Government Compensation in California, State Controller’s Office&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;** &lt;a href=&quot;http://transparentcalifornia.com&quot; target=&quot;_blank&quot;&gt;Transparent California&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;** Open data portals at government websites: &lt;a href=&quot;http://www.ppic.org/main/publication_show.asp?i=1157&quot; target=&quot;_blank&quot;&gt;City of San Francisco&lt;/a&gt;, &lt;a href=&quot;http://www.ppic.org/main/publication_show.asp?i=1157&quot; target=&quot;_blank&quot;&gt;City of San Jose&lt;/a&gt;, &lt;a href=&quot;http://www.ppic.org/main/publication_show.asp?i=1157&quot; target=&quot;_blank&quot;&gt;City of Los Angeles&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;exploratory-data-analysis-and-visualizations&quot;&gt;Exploratory Data Analysis and Visualizations&lt;/h1&gt;
+
+&lt;h2 id=&quot;when-did-pension-recipients-retire&quot;&gt;When did Pension Recipients Retire?&lt;/h2&gt;
 
 &lt;p&gt;Spike in people retiring during the 2009-2011 economic downturn, possible due to early retirement packages and employee attrition,&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/retire_years_federated.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/retire_years_federated.png&quot; alt=&quot;Year of retiral for recipients of Federated pension&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There was a larger spike in police and fire retirements after 2010, possibly due to adopting the “3% at 50” retirement plan, first negotiated by the CHP.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/retire_years_policefire.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;</content><summary type="html">To view or download  the code, click here</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/retire_years_policefire.png&quot; alt=&quot;Year of retiral for the police and fire pension fund&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;correlation-between-pay-and-service-years-on-pension-payment&quot;&gt;Correlation Between Pay and Service Years on Pension Payment&lt;/h2&gt;
+
+&lt;p&gt;For the two pension plans that service City of San Jose employees, the Police and Fire Fund has the more generous pension payment. The trend line for the Police and Fire fund has a steeper slope to reflect this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/base_vs_pensionpay.png&quot; alt=&quot;Correlation between base pay and pension payment&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/service_vs_pensionpay.png&quot; alt=&quot;Correlation between length of service and pension payment&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When considering the current pool of employees, the length of service for police and fire exceeds that of other employees. This is likely due to people dedicating their entire career to the force. This may be since skill sets for Police and Fire don’t easily transfer to the private sector. Also, Police and Fire may be more attractive careers considering the high pay and good benefits.&lt;/p&gt;
+
+&lt;p&gt;However, the number of years of service for Police and Fire has been steadily decreasing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/service_vs_yearofretire.png&quot; alt=&quot;Years of service when retiring&quot; /&gt;&lt;/p&gt;</content><summary type="html">To view or download  the code, click here</summary></entry></feed>

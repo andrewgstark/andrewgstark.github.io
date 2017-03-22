@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Analysis of California Public Pension Liabilities</title>
+  <title>Analysing Public Data About City of San Jose Salaries and Pensions</title>
   <meta name="description" content="To view or download the code, click here">
 
   <link rel="stylesheet" href="/assets/main.css">
@@ -61,24 +61,101 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Analysis of California Public Pension Liabilities</h1>
+    <h1 class="post-title" itemprop="name headline">Analysing Public Data About City of San Jose Salaries and Pensions</h1>
     <p class="post-meta"><time datetime="2017-01-25T10:35:39-08:00" itemprop="datePublished">Jan 25, 2017</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>To view or download  the code, <a href="http://nbviewer.jupyter.org/github/andrewgstark/DSI-SF-4-andrewgstark/blob/master/capstone/Finding_Pension_Spikers_Through_Data_Science.ipynb" target="_blank">click here</a></p>
+    <p><strong>To view or download  the code</strong>, <a href="http://nbviewer.jupyter.org/github/andrewgstark/DSI-SF-4-andrewgstark/blob/master/capstone/Finding_Pension_Spikers_Through_Data_Science.ipynb" target="_blank">click here</a></p>
 
-<h3 id="exploratory-data-analysis-h1">Exploratory Data Analysis H1</h3>
+<ul id="markdown-toc">
+  <li><a href="#problem-statement" id="markdown-toc-problem-statement">Problem Statement</a></li>
+  <li><a href="#business-need-and-stakeholders" id="markdown-toc-business-need-and-stakeholders">Business Need and Stakeholders</a></li>
+  <li><a href="#datasets" id="markdown-toc-datasets">Datasets</a></li>
+  <li><a href="#exploratory-data-analysis-and-visualizations" id="markdown-toc-exploratory-data-analysis-and-visualizations">Exploratory Data Analysis and Visualizations</a>    <ul>
+      <li><a href="#when-did-pension-recipients-retire" id="markdown-toc-when-did-pension-recipients-retire">When did Pension Recipients Retire?</a></li>
+      <li><a href="#correlation-between-pay-and-service-years-on-pension-payment" id="markdown-toc-correlation-between-pay-and-service-years-on-pension-payment">Correlation Between Pay and Service Years on Pension Payment</a></li>
+    </ul>
+  </li>
+</ul>
 
-<h4 id="how-many-employees-retire-per-year">How Many Employees Retire Per Year</h4>
+<h1 id="problem-statement">Problem Statement</h1>
+
+<p>Public sector employees in California are eligible for pensions, based on their final earnings and years of service. These pensions are paid for the retiree’s lifetime, and can optionally be paid to the retiree’s beneficiary for their lifetime. 
+Public pension plans have a huge unfunded liability (the promises made to current and future retirees exceeds the pension funds ability to pay for those promises). There are several reasons for this unfunded liability including:</p>
+
+<ol>
+  <li>
+    <p>Legislation in 1999 (SB 400) that increased benefits and reduced the retirement age</p>
+  </li>
+  <li>
+    <p>Investment returns less than forecast (dot com bust, mortgage crisis, low interest rate)</p>
+  </li>
+  <li>
+    <p>A growing pool of retired employees, and corresponding growing pension obligations</p>
+  </li>
+  <li>
+    <p>Pension spiking, i.e., inappropriate enhancement of the pension benefit, usually when the employer pays an excessive increase of compensation at the end of an employee’s career.</p>
+  </li>
+</ol>
+
+<p><img src="http://localhost:4000/assets/pension-liabilities-fig1.png" alt="California public pension unfunded liabilities" /></p>
+
+<p>Figure source:  <a href="http://www.ppic.org/main/publication_show.asp?i=1157" target="_blank">Public Policy Institute of California</a></p>
+
+<p>This underfunding is causing the pension costs to Cities, Counties and other public sector employers to increase rapidly.</p>
+
+<p>Pension managers have no control over 1 to 3. But some public pension funds do try to detect pension spiking via audits and getting tips.</p>
+
+<h1 id="business-need-and-stakeholders">Business Need and Stakeholders</h1>
+
+<p>Pension funds protect themselves again pension spiking by conducting employer audits, reviewing compensation of individual retirees and issuing clear guidelines about what constitutes creditable pay.</p>
+
+<p>For example, the CA State Teachers Retirement System (CalSTRS) has the following guidelines:</p>
+
+<p>** Not creditable: cash in lieu of fringe benefits, any reimbursable business expense, e.g., housing or auto expenses</p>
+
+<p>** Creditable: pay linked to special certificates, credentials for advanced degrees</p>
+
+<p>** Assignments in addition to regular full-time employment: coaching, summer school, extracurricular activities, etc. earn credit towards a separate benefit (the Defined Benefit Supplement Program (DBS)</p>
+
+<p>** Compensation paid for a specified time period or is a late-career increase inconsistent with the employee’s salary history is credited to DBS and not the standard pension.</p>
+
+<h1 id="datasets">Datasets</h1>
+
+<p>Governments around the world are release more data as part of “open data” initiatives, to improve efficiency and increase transparency. Compensation data about public sector employees is considered public information, and is available from several different source:</p>
+
+<p>** <a href="http://publicpay.ca.gov/" target="_blank">Government Compensation in California, State Controller’s Office</a></p>
+
+<p>** <a href="http://transparentcalifornia.com" target="_blank">Transparent California</a></p>
+
+<p>** Open data portals at government websites: <a href="http://www.ppic.org/main/publication_show.asp?i=1157" target="_blank">City of San Francisco</a>, <a href="http://www.ppic.org/main/publication_show.asp?i=1157" target="_blank">City of San Jose</a>, <a href="http://www.ppic.org/main/publication_show.asp?i=1157" target="_blank">City of Los Angeles</a></p>
+
+<h1 id="exploratory-data-analysis-and-visualizations">Exploratory Data Analysis and Visualizations</h1>
+
+<h2 id="when-did-pension-recipients-retire">When did Pension Recipients Retire?</h2>
 
 <p>Spike in people retiring during the 2009-2011 economic downturn, possible due to early retirement packages and employee attrition,</p>
 
-<p><img src="http://localhost:4000/assets/retire_years_federated.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/retire_years_federated.png" alt="Year of retiral for recipients of Federated pension" /></p>
 
 <p>There was a larger spike in police and fire retirements after 2010, possibly due to adopting the “3% at 50” retirement plan, first negotiated by the CHP.</p>
 
-<p><img src="http://localhost:4000/assets/retire_years_policefire.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/retire_years_policefire.png" alt="Year of retiral for the police and fire pension fund" /></p>
+
+<h2 id="correlation-between-pay-and-service-years-on-pension-payment">Correlation Between Pay and Service Years on Pension Payment</h2>
+
+<p>For the two pension plans that service City of San Jose employees, the Police and Fire Fund has the more generous pension payment. The trend line for the Police and Fire fund has a steeper slope to reflect this.</p>
+
+<p><img src="http://localhost:4000/assets/base_vs_pensionpay.png" alt="Correlation between base pay and pension payment" /></p>
+
+<p><img src="http://localhost:4000/assets/service_vs_pensionpay.png" alt="Correlation between length of service and pension payment" /></p>
+
+<p>When considering the current pool of employees, the length of service for police and fire exceeds that of other employees. This is likely due to people dedicating their entire career to the force. This may be since skill sets for Police and Fire don’t easily transfer to the private sector. Also, Police and Fire may be more attractive careers considering the high pay and good benefits.</p>
+
+<p>However, the number of years of service for Police and Fire has been steadily decreasing.</p>
+
+<p><img src="http://localhost:4000/assets/service_vs_yearofretire.png" alt="Years of service when retiring" /></p>
 
 
   </div>
